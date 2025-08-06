@@ -1,9 +1,6 @@
 /* Ankita Kate */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
+/*----------------- This code is from CSS Reset -------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,3 +44,41 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* -----------  Global Styles ------------*/
+body {
+    font-family: sans-serif;
+    font-size: 16px ;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #FFFFFF;
+    MARGIN: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+    color: #000000; 
+    margin-top: 0;
+  }
+  
+  h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+  }
+
+  a {
+    color: #F6D64A; 
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
