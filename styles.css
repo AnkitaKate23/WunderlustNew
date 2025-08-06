@@ -1,0 +1,295 @@
+/* Ankita Kate */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header img {
+  width: 150px;
+}
+
+/* Main */
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Intro Sections */
+#plan, #testimonials, #about, #contact {
+  margin-top: 3rem;
+}
+
+/* Plan Section */
+#plan > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#plan h3, #plan h4 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+#plan img {
+  width: 60px;
+  margin: 0.5rem 0;
+}
+
+/* Testimonials Section */
+#testimonials > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#testimonials img {
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+
+#testimonials h4 {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#testimonials q {
+  font-style: italic;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* About Section */
+#about > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#about img {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
+
+#about h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Contact Section */
+#contact {
+  margin-top: 2rem;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+#contact input,
+#contact select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact fieldset {
+  border: none;
+  padding: 0;
+}
+
+#contact legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.radio-input {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #f1c40f;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Tablet Styles */
+@media (min-width: 600px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  header img {
+    width: 200px;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #testimonials > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #about > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #plan > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #names,
+  #nums,
+  #selects {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #names label,
+  #nums label,
+  #selects label {
+    flex: 1 1 45%;
+  }
+
+  #names input,
+  #nums input,
+  #selects select {
+    flex: 1 1 45%;
+  }
+
+  input[type="submit"] {
+    width: fit-content;
+    align-self: flex-start;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #testimonials > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #about > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #plan > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section {
+    gap: 2rem;
+  }
+}
