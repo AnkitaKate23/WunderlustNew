@@ -1,55 +1,136 @@
 /* Ankita Kate */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Molle&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Molle&display=swap");
 
 /* 
   =============================================================
                      Reset CSS Code  
   =============================================================
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 
@@ -58,38 +139,42 @@ table {
   =============================================================
 */
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #222222;
-    background-color: #FFFFFF;
-    margin: 0;
-    padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222222;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
-h1, h2, h3 {
-    font-family: 'Molle', cursive;
-    color: #000000;
-    margin-top: 0;
+h1,
+h2,
+h3 {
+  font-family: "Molle", cursive;
+  color: #000000;
+  margin-top: 0;
 }
-h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: #222222;
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #222222;
 }
 p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 a {
-    color: #F6D64A;
-    text-decoration: none;
+  color: #f6d64a;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /*
@@ -98,271 +183,891 @@ img {
    ==========================================================
 */
 
+/* Navbar */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #60c3eb, #cbeef4);
+  padding: 1rem 2rem;
+}
+
+#logo img {
+  height: 60px;
+  margin-right: 1rem;
+}
+
+header h1 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.5rem;
+  color: #222;
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #333;
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+
+#menu-toggle {
+  position: relative;
+  width: 100%;
+}
+
+#menu-toggle input[type="checkbox"] {
+  display: none;
+}
+#menu-toggle label {
+    display: block;
+    background-color: #000000; /* black header */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+
+#menu-toggle ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#menu-toggle input:checked + label + ul {
+  display: block;
+}
+
+#menu-toggle ul li {
+  border-bottom: 1px solid #fff;
+  background-color: #4fc3dc;
+}
+
+#menu-toggle ul li a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+#menu-toggle ul li:last-child {
+  border-bottom: none;
+}
+
+#menu-toggle ul li.active a {
+  background-color: #4fc3dc;
+}
+
+/* plan your trip */
+#plan {
+  background-color: #fdd94f;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+#plan h3 {
+  font-family: "Molle";
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  font-weight: bolder;
+}
+
+#plan > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+#plan section {
+  background-color: #49bdd6;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 1em;
+  width: 180px;
+  height: auto;
+}
+
+#plan h4 {
+  font-size: 1em;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+#plan img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* footer */
+
+#contact {
+  margin-top: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.site-header {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.primary-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero h2 {
+  font-size: 1.75rem;
+}
+
+.main-content {
+  padding: 1.5rem;
+}
+
+.main-content section {
+  display: block;
+}
+
+#contact h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-required {
+  color: var(--accent-purple);
+  font-weight: 100;
+  font-size: 0.875rem;
+  margin-left: 0.25rem;
+  font-family: "Courier New", Courier, monospa;
+}
+
+#nums legend {
+  text-transform: uppercase;
+}
+
+.required {
+  color: var(--accent-purple);
+  font-weight: 600;
+}
+
+#nums label {
+  padding: 10px;
+  color: #222222;
+  font-weight: 500;
+}
+
+.radio-control {
+  background-color: #9b26b0;
+}
+
+form input[type="email"] {
+  background-color: #ffffff;
+  color: #000;
+  font-weight: normal;
+}
+
+#mySubmit {
+  background-color: #9b26b0;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+}
+
+footer {
+  flex-direction: column;
+  text-align: center;
+}
+
+footer a {
+  margin: 0.5rem 0;
+}
+
 /* Header */
 .site-header {
-    background-color: #F6D64A;
-    padding: 1rem;
-    text-align: center;
+  background-color: #f6d64a;
+  padding: 1rem;
+  text-align: center;
 }
 .site-header img {
-    max-width: 120px;
-    margin-bottom: 0.5rem;
+  max-width: 120px;
+  margin-bottom: 0.5rem;
 }
 .site-header h1 {
-    font-family: 'Molle', cursive;
-    font-size: 1.5rem;
-    color: #000000;
-    margin: 0.5rem 0;
+  font-family: "Molle", cursive;
+  font-size: 1.5rem;
+  color: #000000;
+  margin: 0.5rem 0;
 }
 .site-header p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.875rem;
-    color: #222222;
-    margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: #222222;
+  margin: 0;
+}
+
+/* About */
+#about section {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about {
+  background-color: #499bd2;
+  color: #fff;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+#about h3 {
+  font-family: "Molle";
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  color: black;
+}
+
+#about > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+#about section {
+  width: 120px;
+}
+
+#about img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5em;
+  align-items: center;
+}
+
+#about h4 {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: 0.3em;
+}
+
+#about p {
+  font-size: 0.9em;
+  color: #222222;
+  margin: 0;
+}
+
+/* Testimonials */
+
+#testimonials {
+  text-align: center;
+  padding: 1em;
+}
+
+#testimonials h3 {
+  font-family: "Molle";
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bolder;
+}
+
+#testimonials h4 {
+  font-weight: bold;
+}
+
+#testimonials > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+}
+
+#testimonials > div > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+#testimonials img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial h4 {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
+.testimonial p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+q {
+  display: block;
+  font-style: italic;
+  margin-top: 0.5em;
+  color: #333;
+}
+
+/* Majorica */
+
+#intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#intro h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+#intro p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+#img-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+#img-grid img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Navigation */
 .primary-nav {
-    margin-top: 1rem;
-    text-align: center;
+  margin-top: 1rem;
+  text-align: center;
 }
 .primary-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .primary-nav li {
-    display: block;
-    margin: 0.25rem 0;
+  display: block;
+  margin: 0.25rem 0;
 }
 .primary-nav a {
-    font-family: 'Montserrat', sans-serif;
-    color: #F6D64A;
-    font-weight: 600;
-    font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: #f6d64a;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background-color: #fff3cd;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #fff3cd;
 }
 .hero img {
-    width: 100%;
-    border-radius: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 .hero h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    color: #2c3e50;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #2c3e50;
 }
 
 /* Main Content */
 .main-content {
-    padding: 1rem;
-    font-size: 1rem;
-    color: #333;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #333;
 }
 .main-content section {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 blockquote {
-    font-style: italic;
-    margin-bottom: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
 }
 
 /* Footer */
 .site-footer {
-    background-color: #f1c40f;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.875rem;
+  background-color: #f1c40f;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
 }
 .site-footer a {
-    color: #fff;
-    text-decoration: underline;
-    margin: 0 0.5rem;
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 0.5rem;
 }
 
 /* Form */
+
+#contact h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 :root {
-    --accent-purple: #8E24AA;
+  --accent-purple: #8e24aa;
+}
+
+/* Make the form a grid */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+}
+
+/* First name + Last name */
+form > div:nth-of-type(1),
+form > div:nth-of-type(2) {
+  grid-row: 1;
+}
+
+/* Contact method (fieldset) and email/phone */
+form > fieldset {
+  grid-column: 1 / 2;
+  border: none;
+  padding: 0;
+}
+form > div:nth-of-type(3),
+form > div:nth-of-type(4) {
+  grid-column: 2 / 3;
+}
+
+/* Destination and Travel time */
+form > div:nth-of-type(5),
+form > div:nth-of-type(6) {
+  grid-row: 3;
+}
+
+/* Submit Button */
+form > input[type="submit"] {
+  grid-column: span 2;
+  background-color: var(--accent-purple);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+/* Inputs and selects */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select {
+  border: 2px solid var(--accent-purple);
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: Purple background only for email */
+form input[type="email"] {
+  background-color: #f3e5f5;
+  font-weight: bold;
+}
+
+/* Labels */
+form label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: #000;
+}
+.required {
+  color: var(--accent-purple);
+  margin-left: 0.25rem;
+}
+
+/* Custom radio buttons */
+.radio-group input[type="radio"] {
+  appearance: none;
+  border: 2px solid var(--accent-purple);
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 3px;
+}
+.radio-group input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--accent-purple);
+  border-radius: 50%;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+}
+
+/*-----Footer style------*/
+
+footer {
+  background-color: #eeeeee;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  /* Make the form a grid */
-  form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 2rem;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #fff;
+
+  footer a {
+    margin: 0.5rem;
   }
-  
-  /* First name + Last name */
-  form > div:nth-of-type(1),
-  form > div:nth-of-type(2) {
-    grid-row: 1;
-  }
-  
-  /* Contact method (fieldset) and email/phone */
-  form > fieldset {
-    grid-column: 1 / 2;
-    border: none;
-    padding: 0;
-  }
-  form > div:nth-of-type(3),
-  form > div:nth-of-type(4) {
-    grid-column: 2 / 3;
-  }
-  
-  /* Destination and Travel time */
-  form > div:nth-of-type(5),
-  form > div:nth-of-type(6) {
-    grid-row: 3;
-  }
-  
-  /* Submit Button */
-  form > input[type="submit"] {
-    grid-column: span 2;
-    background-color: var(--accent-purple);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: fit-content;
-  }
-  
-  /* Inputs and selects */
-  form input[type="text"],
-  form input[type="email"],
-  form input[type="tel"],
-  form select {
-    border: 2px solid var(--accent-purple);
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* Optional: Purple background only for email */
-  form input[type="email"] {
-    background-color: #f3e5f5;
-    font-weight: bold;
-  }
-  
-  /* Labels */
-  form label {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-    display: block;
-    color: #000;
-  }
-  .required {
-    color: var(--accent-purple);
-    margin-left: 0.25rem;
-  }
-  
-  /* Custom radio buttons */
-  .radio-group input[type="radio"] {
-    appearance: none;
-    border: 2px solid var(--accent-purple);
-    border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-    margin-right: 0.5rem;
-    position: relative;
-    top: 3px;
-  }
-  .radio-group input[type="radio"]:checked::before {
-    content: '';
-    display: block;
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: var(--accent-purple);
-    border-radius: 50%;
-    position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-  }
+}
+
 /*
   ======================================================
            Media Queries for Larger Screens
   ======================================================
 */
 
+/* Mobile */
+
+@media (min-width: 320px) and (max-width: 767px) {
+  /* footer */
+  #contact {
+    margin-top: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .site-header {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .primary-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .main-content section {
+    display: block;
+  }
+
+  #contact h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-required {
+    color: var(--accent-purple);
+    font-weight: 100;
+    font-size: 0.875rem;
+    margin-left: 0.25rem;
+    font-family: "Courier New", Courier, monospa;
+  }
+
+  #nums legend {
+    text-transform: uppercase;
+  }
+
+  .required {
+    color: var(--accent-purple);
+    font-weight: 600;
+  }
+
+  #nums label {
+    padding: 10px;
+    color: #222222;
+    font-weight: 500;
+  }
+
+  .radio-control {
+    background-color: #9b26b0;
+  }
+
+  form input[type="email"] {
+    background-color: #ffffff;
+    color: #000;
+    font-weight: normal;
+  }
+
+  #mySubmit {
+    background-color: #9b26b0;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer a {
+    margin: 0.5rem 0;
+  }
+}
+
 /* Tablet */
-@media (min-width: 768px) {
-    .site-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem;
-        text-align: left;
-    }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    text-align: left;
+  }
 
-    .primary-nav ul {
-        display: flex;
-        justify-content: flex-end;
-        gap: 1rem;
-    }
+  .primary-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
 
-    .primary-nav li {
-        margin: 0;
-    }
+  .primary-nav li {
+    margin: 0;
+  }
 
-    .hero h2 {
-        font-size: 2rem;
-    }
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-    .main-content section {
-        display: flex;
-        flex-direction: row;
-        gap: 1.5rem;
-    }
+  .main-content section {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 
-    .main-content img {
-        max-width: 50%;
-    }
+  .main-content img {
+    max-width: 50%;
+  }
+
+  /* Majorica */
+
+  #intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  #intro h2 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+
+  #intro p {
+    font-size: 1.1rem;
+    color: #444;
+  }
+
+  #img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  /* Tablet view */
+
+  #img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  #img-grid img:last-child {
+    grid-column: 1 / -1;
+  }
+
+  #img-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Plan */
+  #plan > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+  /* testimonials */
+  #testimonials > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  /* form */
+
+  form {
+    display: block;
+  }
+  form input[type="email"] {
+    background-color: #ffffff;
+    color: #000;
+    font-weight: normal;
+  }
+
+  /* Majorica */
+
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
-    .site-header,
-    .main-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem 3rem;
-    }
-
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    .main-content {
-        font-size: 1.1rem;
-    }
-
-    .main-content section {
-        gap: 2rem;
-    }
-
-    .main-content .testimonials,
-    .main-content .destination-info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
+  .site-header,
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
-
+form {
+    display: block;
+  }
+  form input[type="email"] {
+    background-color: #ffffff;
+    color: #000;
+    font-weight: normal;
+  }
