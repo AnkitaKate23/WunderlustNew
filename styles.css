@@ -1,5 +1,8 @@
 /* Ankita Kate */
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Molle&display=swap');
+
 /* 
   =============================================================
                      Reset CSS Code  
@@ -54,197 +57,312 @@ table {
                 Global Styles for Mobile First
   =============================================================
 */
-/* -------- Body styles based on the brand guide --------- */
 body {
-    font-family: sans-serif;
-    font-size: 16px ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     color: #222222;
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
 }
-/* ---------- Heading Style ----------*/
 h1, h2, h3 {
     font-family: 'Molle', cursive;
-    color: #000000; 
+    color: #000000;
     margin-top: 0;
-  }
-  
-  h4, h5, h6 {
+}
+h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     color: #222222;
-  }
-
-  /* ----------- Link Style --------------*/
-  a {
-    color: #F6D64A; 
+}
+p {
+    margin-bottom: 1rem;
+}
+a {
+    color: #F6D64A;
     text-decoration: none;
-  }
-  a:hover,
-  a:focus {
+}
+a:hover,
+a:focus {
     text-decoration: underline;
-  }
-  
-  /* ------------- Responsive style to include globally --------------*/
-  img {
+}
+img {
     max-width: 100%;
     height: auto;
     display: block;
-  }
+}
 
-  /*
+/*
    ==========================================================
           Page Sections & Components (Mobile-First)
    ==========================================================
 */
 
-/*----------- Header ---------------*/
+/* Header */
 .site-header {
-    background-color: #F6D64A; /* Brand yellow */
+    background-color: #F6D64A;
     padding: 1rem;
     text-align: center;
-  }
-  
-  .site-header img {
+}
+.site-header img {
     max-width: 120px;
     margin-bottom: 0.5rem;
-  }
-  
-  .site-header h1 {
+}
+.site-header h1 {
     font-family: 'Molle', cursive;
     font-size: 1.5rem;
     color: #000000;
     margin: 0.5rem 0;
-  }
-  
-  .site-header p {
+}
+.site-header p {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.875rem;
     color: #222222;
     margin: 0;
-  }
-  
-/*------------- Navigation ---------*/
+}
+
+/* Navigation */
 .primary-nav {
     margin-top: 1rem;
     text-align: center;
-  }
-  
-  .primary-nav ul {
+}
+.primary-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .primary-nav li {
+}
+.primary-nav li {
     display: block;
     margin: 0.25rem 0;
-  }
-  
-  .primary-nav a {
+}
+.primary-nav a {
     font-family: 'Montserrat', sans-serif;
     color: #F6D64A;
     font-weight: 600;
-    text-decoration: none;
     font-size: 1rem;
-  }
-  
-  /*-------------- Hero Section ----------*/
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
     padding: 1.5rem 1rem;
     background-color: #fff3cd;
-  }
-  .hero img {
+}
+.hero img {
     width: 100%;
     border-radius: 0.5rem;
-  }
-  .hero h2 {
+}
+.hero h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     margin-top: 1rem;
     color: #2c3e50;
-  }
-  
-  /*----------- Main Content --------*/
-  .main-content {
+}
+
+/* Main Content */
+.main-content {
     padding: 1rem;
     font-size: 1rem;
     color: #333;
-    line-height: 1.6;
-  }
-  .main-content section {
+}
+.main-content section {
     margin-bottom: 2rem;
-  }
-  
-  /*--------------- Footer ----------------*/
-  .site-footer {
+}
+blockquote {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
     background-color: #f1c40f;
     color: #fff;
     text-align: center;
     padding: 1rem;
     font-size: 0.875rem;
-  }
-  .site-footer a {
+}
+.site-footer a {
     color: #fff;
     text-decoration: underline;
     margin: 0 0.5rem;
+}
+
+/* Form */
+:root {
+    --accent-purple: #8E24AA;
   }
-
-  /*
-    ======================================================
-             Media Queries for Larger Screens
-    ======================================================
-  */
-
-  /*------------ Tablet Styles -------------*/
-    @media (min-width: 768px) {
-    /*--------- Header ---------*/
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      text-align: left;
-    }
   
-    /*------------ Navigation -------------*/
+  /* Make the form a grid */
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+  }
+  
+  /* First name + Last name */
+  form > div:nth-of-type(1),
+  form > div:nth-of-type(2) {
+    grid-row: 1;
+  }
+  
+  /* Contact method (fieldset) and email/phone */
+  form > fieldset {
+    grid-column: 1 / 2;
+    border: none;
+    padding: 0;
+  }
+  form > div:nth-of-type(3),
+  form > div:nth-of-type(4) {
+    grid-column: 2 / 3;
+  }
+  
+  /* Destination and Travel time */
+  form > div:nth-of-type(5),
+  form > div:nth-of-type(6) {
+    grid-row: 3;
+  }
+  
+  /* Submit Button */
+  form > input[type="submit"] {
+    grid-column: span 2;
+    background-color: var(--accent-purple);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  
+  /* Inputs and selects */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form select {
+    border: 2px solid var(--accent-purple);
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Optional: Purple background only for email */
+  form input[type="email"] {
+    background-color: #f3e5f5;
+    font-weight: bold;
+  }
+  
+  /* Labels */
+  form label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    display: block;
+    color: #000;
+  }
+  .required {
+    color: var(--accent-purple);
+    margin-left: 0.25rem;
+  }
+  
+  /* Custom radio buttons */
+  .radio-group input[type="radio"] {
+    appearance: none;
+    border: 2px solid var(--accent-purple);
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 3px;
+  }
+  .radio-group input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: var(--accent-purple);
+    border-radius: 50%;
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+  }
+/*
+  ======================================================
+           Media Queries for Larger Screens
+  ======================================================
+*/
+
+/* Tablet */
+@media (min-width: 768px) {
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        text-align: left;
+    }
+
     .primary-nav ul {
-      text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
     }
-  
-    /* ------------- Main Content ----------*/
-    .main-content section {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
-    }
-  
-    .main-content img {
-      max-width: 50%;
-    }
-   }
-  
-   /*------------- Desktop Styles ----------*/
-  @media (min-width: 1200px) {
 
-    /*--------- Header ----------*/
-    .site-header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 3rem;
+    .primary-nav li {
+        margin: 0;
     }
-  
-    /* ------------ Main Content --------*/
-    .main-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      font-size: 1.1rem;
+
+    .hero h2 {
+        font-size: 2rem;
     }
-  
+
     .main-content section {
-      gap: 2rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
     }
-  }
-  
+
+    .main-content img {
+        max-width: 50%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .site-header,
+    .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 3rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-content {
+        font-size: 1.1rem;
+    }
+
+    .main-content section {
+        gap: 2rem;
+    }
+
+    .main-content .testimonials,
+    .main-content .destination-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
