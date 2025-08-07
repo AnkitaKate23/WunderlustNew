@@ -101,30 +101,53 @@ h1, h2, h3 {
 
 /*----------- Header ---------------*/
 .site-header {
-    text-align: center;
+    background-color: #F6D64A; /* Brand yellow */
     padding: 1rem;
-    background-color: #f1c40f; /* Brand yellow */
-    color: #fff;
-    font-family: 'Molle', cursive;
+    text-align: center;
   }
   
-  /*------------- Navigation ---------*/
-  .primary-nav {
-    margin-top: 1rem;
+  .site-header img {
+    max-width: 120px;
+    margin-bottom: 0.5rem;
   }
-  .primary-nav ul {
-    padding: 0;
-    list-style: none;
+  
+  .site-header h1 {
+    font-family: 'Molle', cursive;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 0.5rem 0;
+  }
+  
+  .site-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    color: #222222;
+    margin: 0;
+  }
+  
+/*------------- Navigation ---------*/
+.primary-nav {
+    margin-top: 1rem;
     text-align: center;
   }
-  .primary-nav li {
-    display: inline-block;
-    margin: 0 0.5rem;
+  
+  .primary-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
+  
+  .primary-nav li {
+    display: block;
+    margin: 0.25rem 0;
+  }
+  
   .primary-nav a {
-    text-decoration: none;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    color: #F6D64A;
     font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
   }
   
   /*-------------- Hero Section ----------*/
